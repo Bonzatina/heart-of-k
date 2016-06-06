@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/pages'));
 
 
 
-app.get('/', controller.home);
+app.get('/', controller.about);
 
 app.get('/about', controller.about);
 
