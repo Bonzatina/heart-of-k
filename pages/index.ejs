@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title><%= title %></title>
+</head>
+<body>
+<div class="head">
+    <h1>welcome to TEST</h1>
+</div>
+
+
+</div>
+<% users.forEach(function(users) { %>
+<div class="user">
+    <div class="user__name">
+        <%= users.name  %>
+    </div>
+    <div class="user__last_name">
+        <%= users.last_name  %>
+    </div>
+    <div class="user__cr_date">
+        <%= users.createdate  %>
+    </div>
+
+    <div class="user__contacts">
+        <div class="user__contacts__phone">
+            <span>телефончик:</span>  <%= users.phone_number  %>
+        </div>
+        <div class="user__contacts__email">
+            <span>мыло:</span>   <%= users.email  %>
+        </div>
+    </div>
+
+</div>
+<% }); %>
+<div class="user" style="width: 150px; height: 50px;">
+    <input type="text" name="firstname">
+    <a href="/users">Юзерссс</a>
+</div>
+
+
+
+
+<div class="footer">
+    <% include partials/footer %>
+</div>
+
+<script> console.log(<%= users[0].last_name %>); </script>
+</body>
+</html>
