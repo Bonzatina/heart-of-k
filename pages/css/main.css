@@ -1,3 +1,66 @@
+@font-face {
+  font-family: Kazmann_Sans;
+  src: url(/pages/fonts/Kazmann_Sans.ttf);
+}
+body {
+  margin: 0;
+}
+
+video {
+  width: 150%;
+  height: auto;
+}
+.startfade{
+  opacity: 1;
+}
+.stopfade {
+  opacity: 0;
+}
+
+.wrap{
+  height:auto !important;
+  height:100%;
+  min-height:100%
+}
+.heart_menu {
+  text-align: center;
+  margin: auto;
+  padding-top: 140px;
+  width: 500px;
+  height: 250px;
+}
+/*.heart_menu:hover {*/
+  /*cursor: pointer;*/
+/*}*/
+
+.heart_menu__img{
+  height: 230px;
+  float: left;
+
+ }
+.heart_menu__text, .heart_menu__text2  {
+  text-align: left;
+  padding-top: 30px;
+  font-family: Kazmann_Sans;
+
+}
+.sgib_img{
+  height: 600px;
+  display: inline-block;
+}
+.start_text_img{
+  cursor: pointer;
+  height: 200px;
+  margin-top: 440px;
+  /*margin-left: 100px;*/
+}
+.footer_custom{
+  width: 100%;
+  height: 100px;
+  background-color: #7a4e62;
+}
+
+/*выше все новое 26.07.16*/
 .head {
   text-align: center;
 }
