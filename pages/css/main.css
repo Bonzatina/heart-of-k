@@ -1,13 +1,13 @@
 @font-face {
-  font-family: Kazmann_Sans;
-  src: url(/pages/fonts/Kazmann_Sans.ttf);
+  font-family: 'Kazmann Sans';
+  src: url(/fonts/kazmannsans/Kazmannsans.ttf);
 }
 body {
   margin: 0;
 }
 
 video {
-  width: 150%;
+  width: 100%;
   height: auto;
 }
 .startfade{
@@ -26,38 +26,58 @@ video {
   text-align: center;
   margin: auto;
   padding-top: 140px;
-  width: 500px;
-  height: 250px;
+  width: 700px;
+  height: 300px;
 }
 /*.heart_menu:hover {*/
   /*cursor: pointer;*/
 /*}*/
 
 .heart_menu__img{
-  height: 230px;
+  height: 290px;
   float: left;
-
  }
+@media screen and (max-width: 980px)  {
+  .heart_menu__img{
+    float: none;
+    display: block;
+  }
+  .heart_menu__links{
+    padding-left: 10%;
+  }
+}
+.heart_menu__links{
+  text-align: left;
+  padding-top: 40px;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: 'Kazmann Sans';
+}
+.heart_menu__links a{
+  color: black;
+
+}
 .heart_menu__text, .heart_menu__text2  {
   text-align: left;
-  padding-top: 30px;
-  font-family: Kazmann_Sans;
-
+  padding-top: 40px;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: 'Kazmann Sans';
 }
-.sgib_img{
-  height: 600px;
-  display: inline-block;
-}
-.start_text_img{
-  cursor: pointer;
-  height: 200px;
-  margin-top: 440px;
-  /*margin-left: 100px;*/
-}
+/*.sgib_img{*/
+  /*height: 600px;*/
+  /*display: inline-block;*/
+/*}*/
+/*.start_text_img{*/
+  /*cursor: pointer;*/
+  /*height: 200px;*/
+  /*margin-top: 440px;*/
+  /*!*margin-left: 100px;*!*/
+/*}*/
 .footer_custom{
   width: 100%;
   height: 100px;
-  background-color: #7a4e62;
+  background-color: grey;
 }
 
 /*выше все новое 26.07.16*/

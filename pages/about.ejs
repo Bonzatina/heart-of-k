@@ -2,35 +2,68 @@
 <head>
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC24VdF6Gwwx37uPFZmd1t1oVzr2S8JRis&callback=initMap">
+    </script>
+    <script type="text/javascript">
+
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 55.797774, lng: 49.121631},
+                zoom: 14
+            });
+        }
+
+    </script>
+
     <title>Heart</title>
 </head>
-<body>
+<body ng-app>
+<span onload=""></span>
 
 <!--<img src="files/sgib.png" class="sgib_img">-->
 <div class="wrap">
 <div class="heart_menu">
 
-    <img src="files/heart_alfa.png" class="heart_menu__img" usemap="#map">
+    <a href ng-click="heart_menu__img = true; heart_menu__text2 = false; heart_menu__text = false; heart_menu__text3 = false; heart_menu__text4 = false"> <img src="files/heart_alfa.png" class="heart_menu__img" usemap="#map"></a>
 
-    <map name="map" id="map">
-        <area id="ar1" shape="poly" coords="94,146,94,146,62,168,59,198,67,212,96,219,99,215,113,219,137,217,159,207,173,194,178,179,171,163,154,169,135,154,117,167,109,163" href="#1" alt="">
-        <area id="ar2" shape="poly" coords="39,115,39,115,38,161,46,185,48,184,48,184,60,198,62,198,62,198,58,172,75,152,88,143,66,104" href="#2" alt="">
+    <map name="map" >
+        <!--<area id="ar1" shape="poly" coords="94,146,94,146,62,168,59,198,67,212,96,219,99,215,113,219,137,217,159,207,173,194,178,179,171,163,154,169,135,154,117,167,109,163" href="#1" alt="">-->
+        <!--<area id="ar2" shape="poly" coords="39,115,39,115,38,161,46,185,48,184,48,184,60,198,62,198,62,198,58,172,75,152,88,143,66,104" href="#2" alt="">-->
 
-        <area shape="poly" coords="145,103,145,103,136,147,147,163,149,165,150,166,150,166,166,164,178,155,174,122,169,108,159,101" href="#3" alt="">
+        <!--<area shape="poly" coords="145,103,145,103,136,147,147,163,149,165,150,166,150,166,166,164,178,155,174,122,169,108,159,101" href="#3" alt="">-->
         </map>
-    <div class="heart_menu__text">
+    <div class="heart_menu__links" ng-hide="heart_menu__text2" ng-show="heart_menu__img">
 
-        / Рахим итегез / Мин кая? / Маршрут построен / КварталА /
-        / Дуслар / Бугульма /
-        / Место силы –> / Парк Горького / Зур Кызыл / Щапова, 18 /
-        / I&I / Фукса сад / Гастроном / На Булак / Лядской сад /
-        / Маяковского / Карла Маркса / Муштари / НКЦ / Мирумир /
-        / Сковородка / Нижний Кабан / На Черное озеро / И алга! /
+        / Рахим итегез / <a href ng-click="heart_menu__text2 = true; heart_menu__img = false">Мин кая?</a> / <a href ng-click="heart_menu__text = true; heart_menu__img = false">Маршрут построен</a>  / КварталА /<br/>
+        / <a href ng-click="heart_menu__text3 = true; heart_menu__img = false">Дуслар</a>  / <a href="https://ru.wikipedia.org/wiki/%D0%91%D1%83%D0%B3%D1%83%D0%BB%D1%8C%D0%BC%D0%B0" target="_blank">Бугульма</a> /<br/>
+        / <a href ng-click="heart_menu__text4 = true; heart_menu__img = false; initMap()">Место силы –></a> / Парк Горького / Зур Кызыл / Щапова, 18 /<br/>
+        / I&I / Фукса сад / <a href="/contacts">Гастроном </a> / На Булак / Лядской сад /<br/>
+        / Маяковского / Карла Маркса / Муштари / НКЦ / Мирумир /<br/>
+        / Сковородка / Нижний Кабан / На Черное озеро / И алга! /<br/>
+        <!--<a href ng-click="heart_menu__text2 = !heart_menu__text2">Toggle Cats</a>-->
+        <!--<img ng-src="files/heart_alfa.png" ng-show="goCats">-->
     </div>
-    <!--<div class="heart_menu__text2">-->
-        <!--<h4> о Вас.</h4>-->
-        <!--Алабама рекордс презент. Зе бест оф фичерс онли он аур шоу! Модерн спичс энд бекдорс релейтед. Донт вори абаут энисинг! )</p>-->
-    <!--</div>-->
+    <div class="heart_menu__text2" ng-show="heart_menu__text2">
+        <h4> о Вас.</h4>
+        Алабама рекордс презент. Зе бест оф фичерс онли он аур шоу! Модерн спичс энд бекдорс релейтед. Донт вори абаут энисинг! )</p>
+    </div>
+    <div class="heart_menu__text" ng-show="heart_menu__text">
+        <h4> Неожиданный поворот!</h4>
+        ɓоɔɯɐɯоҺно uоɓʞvoıҺиɯq єɯоɯ wоɓʎvq и оuиɔɐɯq єффǝʞɯıq uǝdǝхоɓоʚ ʚ ɔss ɔvɐņɓıq нɐҺнʎɯ uvɐʚно ɔwǝнʁɯq ɓdʎɹ ɓdʎɹɐ˙ udиwǝd єффǝʞɯɐ udоʁʚvǝниʁ:</p>
+    </div>
+    <div class="heart_menu__text" ng-show="heart_menu__text3">
+        <h4> Друзья/Партнеры</h4>
+   Их много! <br/>
+        Один другого лучше!</p>
+    </div>
+
+    <div class="heart_menu__text" ng-show="heart_menu__text4">
+    <div id="map" style="width: 300px; height:200px;"></div>
+
+    </div>
 <!--<button>dd</button>-->
 
     </div>
