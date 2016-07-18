@@ -13,5 +13,7 @@ app.get('/', controller.about);
 
 app.get('/about', controller.about);
 
+app.get('/gen', controller.generator);
+
 
 module.exports = app;

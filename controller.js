@@ -11,3 +11,8 @@ exports.home = function (req, res) {
 exports.about = function (req, res) {
     res.render('about');
 };
+
+exports.generator = function (req, res) {
+    res.render('gen');
+};
+
